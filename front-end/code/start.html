@@ -7,8 +7,8 @@
             .intext
             {
                 border: 1px solid green;
-                max-width: fit-content;
-                margin-inline: auto;
+                position: absolute;
+                left: 50%;
             }
             .myname
             {
@@ -23,10 +23,10 @@
         <div class="intext">
             <h1>Enter Data</h1>
             <input type="text" ng-model="data">
-            <p>{{data}}</p>
+            <p ng-bind="data"></p>
         </div>
         <div class="myname" ng-init="intra_login='made by zasabri'">
-            <p>{{intra_login}}</p>
+            <p ng-bind="intra_login"></p>
         </div>
     </body>
 </html>
