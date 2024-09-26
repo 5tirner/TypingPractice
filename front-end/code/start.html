@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-<html ng-app="">
+<html ng-app="elements" ng-controller="controle">
     <head>
         <title>AngularProject</title>
         <style>
             .intext
             {
                 border: 1px solid green;
-                position: absolute;
-                left: 50%;
+                max-width: fit-content;
+                margin-inline: auto;
             }
             .myname
             {
                 border: 1px solid black;
                 position: absolute;
-                left: 50%;
+                left: 48%;
                 bottom: 0%;
             }
         </style>
     </head>
     <body>
         <div class="intext">
-            <h1>Enter Data</h1>
+            <p>Enter Text</p>
             <input type="text" ng-model="data">
-            <p ng-bind="data"></p>
         </div>
-        <div class="myname" ng-init="intra_login='made by zasabri'">
+        <h1>Your Text: {{data}}</h1>
+        <div class="myname" ng-init="intra_login">
             <p ng-bind="intra_login"></p>
         </div>
+        <script src="./structure.js"></script>
     </body>
 </html>
