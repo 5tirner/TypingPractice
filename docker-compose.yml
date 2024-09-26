@@ -1,0 +1,12 @@
+services:
+  front-end:
+    init: true
+    build: ./front-end
+    image: front-end-image
+    container_name: front-end
+    ports:
+      - '8000:80'
+    volumes:
+      - type: bind
+        source: ./front-end/code/
+        target: /var/www/html/
