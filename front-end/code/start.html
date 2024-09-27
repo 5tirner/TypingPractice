@@ -1,34 +1,76 @@
 <!DOCTYPE html>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-<html ng-app="elements" ng-controller="controle">
+<html ng-app="app" ng-controller="controle">
     <head>
-        <title>AngularProject</title>
-        <link rel="icon" type="image/x-icon" href="https://png.pngtree.com/png-vector/20190505/ourmid/pngtree-vector-apps-icon-png-image_1023269.jpg">
+        <title>Typing...</title>
+        <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2554/2554267.png">
         <style>
-            .intext
+            .pageTop
             {
-                border: 1px solid green;
+                border: 1px solid blue;
+                text-align: center;
+                margin-bottom: 100px;
+                color: rgba(247, 231, 8, 0.39);
+            }
+            .creator
+            {
+                border: 1px solid blueviolet; position: absolute;
+                right: 50%;
+                bottom: 0%; top: 95%;
+                color: rgba(247, 231, 8, 0.39);
+            }
+            .inData
+            {
+                border: 1px solid rgb(211, 66, 22);
                 max-width: fit-content;
                 margin-inline: auto;
             }
-            .myname
+            .outData
             {
-                border: 1px solid black;
+                border: 1px solid rgba(138, 2, 2, 0.678);
                 position: absolute;
-                left: 48%;
+                top: 50%;
+                left: 10%;
+                right: 10%;
+            }
+            html, body
+            {
+                height: 100%;
+            }
+
+            .keybordImage
+            {
+                background-image: url("https://i.gifer.com/origin/60/60120cc1d020a156a8401a3a2db12c4d.gif");
+                height: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                filter: blur(20px);
+            }
+
+            .allElements
+            {
+                position: absolute;
+                top: 0%;
                 bottom: 0%;
+                left: 0%;
+                right: 0%;
             }
         </style>
     </head>
+
     <body>
-        <div class="intext">
-            <p>Enter Text</p>
-            <input type="text" ng-model="data">
+        <div class="keybordImage"></div>
+        <div class="allElements">
+            <div class="pageTop"> <h1>Welcome To Typing...Practice</h1> </div>
+            
+            <div class="creator" ng-init="creatorName"> <p ng-bind="creatorName"> </p></div>
+            
+            <div class="inData"> <input type="text" ng-model="data"> </div>
+            
+            <div class="outData"> <p ng-bind="data"> </p> </div>
+            
+            <script src="./structure.js"></script>
         </div>
-        <h1>Your Text: {{data}}</h1>
-        <div class="myname" ng-init="intra_login">
-            <p ng-bind="intra_login"></p>
-        </div>
-        <script src="./structure.js"></script>
     </body>
 </html>

@@ -10,3 +10,4 @@ services:
       - type: bind
         source: ./front-end/code/
         target: /var/www/html/
+    restart: always

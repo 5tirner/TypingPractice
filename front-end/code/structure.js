@@ -1,10 +1,11 @@
 
-const element = angular.module('elements', []);
-element.controller
-(   'controle',
+const elements = angular.module('app', []);
+elements.controller
+(
+    'controle',
     function($scope)
     {
-        $scope.intra_login = "zasabri";
+        $scope.creatorName = "zasabri";
         $scope.data = "";
-    }
+    } 
 );
