@@ -5,7 +5,7 @@ elements.controller
     'controle',
     function($scope)
     {
-        $scope.creatorName = "zasabri";
+        $scope.creatorName = "by zasabri";
         $scope.data = "";
     } 
-);
+); 
