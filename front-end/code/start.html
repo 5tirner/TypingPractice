@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-<html ng-app="app" ng-controller="controle">
+<html ng-app="elements" ng-controller="cntrl" date-directive>
     <head>
         <title>Typing...</title>
         <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2554/2554267.png">
         <style>
+            html, body
+            {
+                height: 100%;
+            }
+
             .pageTop
             {
-                border: 1px solid blue;
+                border: 3px solid blue;
                 text-align: center;
-                margin-bottom: 100px;
+                margin-bottom: 50px;
                 color: rgba(241, 227, 21, 0.884);
             }
             .creator
             {
-                border: 1px solid blueviolet; position: absolute;
+                border: 3px solid blueviolet; position: absolute;
                 right: 50%;
                 bottom: 0%; top: 95%;
                 color: rgba(241, 227, 21, 0.884);
             }
             .inData
             {
-                border: 1px solid rgb(211, 66, 22);
+                border: 3px solid rgb(211, 66, 22);
                 max-width: fit-content;
                 margin-inline: auto;
             }
             .outData
             {
-                border: 1px solid rgba(138, 2, 2, 0.678);
+                border: 3px solid rgba(138, 2, 2, 0.678);
                 position: absolute;
                 top: 70%;
                 left: 10%;
                 right: 10%;
-            }
-            html, body
-            {
-                height: 100%;
             }
 
             .keybordImage
@@ -56,20 +57,17 @@
                 left: 0%;
                 right: 0%;
             }
+
         </style>
     </head>
 
     <body>
         <div class="keybordImage"></div>
         <div class="allElements">
-            <div class="pageTop"> <h1>Welcome To Typing...Practice</h1> </div>
-            
-            <div class="creator" ng-init="creatorName"> <p ng-bind="creatorName"> </p></div>
-            
+            <div class="creator"> <p>{{creatorInfo}}</p> </div>
+            <div class="pageTop"> <h1>{{welcomeWord}}</h1> </div>
             <div class="inData"> <input type="text" ng-model="data"> </div>
-            
-            <div class="outData"> <p ng-bind="data"> </p> </div>
-            
+            <div class="outData"> <p>{{data}}</p> </div>
             <script src="./structure.js"></script>
         </div>
     </body>

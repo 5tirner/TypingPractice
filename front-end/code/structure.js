@@ -1,11 +1,11 @@
-
-const elements = angular.module('app', []);
-elements.controller
+const angularApp = angular.module('elements', []);
+angularApp.controller
 (
-    'controle',
+    'cntrl',
     function($scope)
     {
-        $scope.creatorName = "by zasabri";
+        $scope.creatorInfo = "Created By Zasabri";
+        $scope.welcomeWord = "WELCOME TO TYPING...PRACTICE";
         $scope.data = "";
-    } 
-); 
+    }
+);
