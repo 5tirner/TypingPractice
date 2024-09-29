@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<html ng-app="myapp" mydirective>
+    <head>
+        <title>Derictives TEST</title>
+    </head>
+    <body>
+        <script>
+            const mydir = angular.module("myapp", []);
+            mydir.directive(
+                "mydirective",
+                function()
+                {
+                    return {template: new Date()};
+                }
+            )
+        </script>
+    </body>
+</html>
