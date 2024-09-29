@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-<html ng-app="elements" ng-controller="cntrl" date-directive>
+<html ng-app="projectApp" ng-controller="projectController">
     <head>
         <title>Typing...</title>
         <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2554/2554267.png">
@@ -13,15 +13,13 @@
             .pageTop
             {
                 border: 3px solid blue;
-                text-align: center;
-                margin-bottom: 50px;
+                text-align: center; margin-bottom: 50px;
                 color: rgba(241, 227, 21, 0.884);
             }
             .creator
             {
                 border: 3px solid blueviolet; position: absolute;
-                right: 50%;
-                bottom: 0%; top: 95%;
+                right: 50%; left: auto; bottom: 0%; top: auto;
                 color: rgba(241, 227, 21, 0.884);
             }
             .inData
@@ -34,9 +32,8 @@
             {
                 border: 3px solid rgba(138, 2, 2, 0.678);
                 position: absolute;
-                top: 70%;
-                left: 10%;
-                right: 10%;
+                top: 70%; bottom: auto; left: 10%; right: 10%;
+                color: rgb(255, 207, 85);
             }
 
             .keybordImage
@@ -52,22 +49,26 @@
             .allElements
             {
                 position: absolute;
-                top: 0%;
-                bottom: 0%;
-                left: 0%;
-                right: 0%;
+                top: 0%; bottom: 0%; left: 0%; right: 0%;
             }
 
+            .generatedDerictive
+            {
+                border: 3px solid rgb(32, 90, 54);
+                position: absolute;
+                bottom: 20%; top: auto; right: 50%; left: auto;
+                color: rgb(255, 207, 85);
+            }
         </style>
     </head>
 
     <body>
         <div class="keybordImage"></div>
         <div class="allElements">
-            <div class="creator"> <p>{{creatorInfo}}</p> </div>
-            <div class="pageTop"> <h1>{{welcomeWord}}</h1> </div>
-            <div class="inData"> <input type="text" ng-model="data"> </div>
-            <div class="outData"> <p>{{data}}</p> </div>
+            <div class="creator">{{derictedBy}}</div>
+            <div class="pageTop"> <h1>{{welcoming}}</h1> </div>
+            <div class="inData"><input type="text" ng-model="Data"></div>
+            <div class="outData"><p>{{Data}}</p></div>
             <script src="./structure.js"></script>
         </div>
     </body>
